@@ -598,6 +598,24 @@
             {/block:PermalinkPage}
         });
     </script>
+    <!-- For Syntax Highlighting -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/google/code-prettify/master/src/prettify.css"></link>  
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/src/prettify.js" type="application/javascript"></script>  
+    <script>
+        function styleCode() {
+            if (typeof disableStyleCode != 'undefined') { return; }
+            var a = false;
+    
+            $('code').each(function() {
+                if (!$(this).hasClass('prettyprint')) {
+                    $(this).addClass('prettyprint');
+                    a = true;
+                }
+            });
+            if (a) { prettyPrint(); } 
+        }
+        $(function() {styleCode();});
+    </script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
